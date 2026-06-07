@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: student-management-backend
+    env: node
+    buildCommand: cd src/backend && npm install
+    startCommand: cd src/backend && ts-node index.ts
+    plan: free
+    envVars:
+      - key: NODE_VERSION
+        value: 18
