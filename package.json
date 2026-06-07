@@ -81,6 +81,7 @@
     "nodemailer": "^8.0.7",
     "oidc-client-ts": "^2.2.5",
     "path": "^0.12.7",
+    "pg": "^8.21.0",
     "react": "^17.0.0",
     "react-apexcharts": "^1.4.1",
     "react-beautiful-dnd": "^13.1.0",
