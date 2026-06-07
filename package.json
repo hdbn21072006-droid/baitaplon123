@@ -27,6 +27,7 @@
     "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider UMI_ENV=dev umi dev",
     "start:backend": "ts-node-dev --respawn --transpile-only --project tsconfig.backend.json src/backend/index.ts",
     "migrate": "ts-node-dev --transpile-only --project tsconfig.backend.json src/backend/database/migrate.ts",
+    "migrate:postgres": "ts-node-dev --transpile-only --project tsconfig.backend.json src/backend/database/migrate-postgres.ts",
     "start:dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider REACT_APP_ENV=dev MOCK=none UMI_ENV=dev umi dev",
     "start:no-mock": "cross-env NODE_OPTIONS=--openssl-legacy-provider MOCK=none UMI_ENV=dev umi dev",
     "start:no-ui": "cross-env NODE_OPTIONS=--openssl-legacy-provider UMI_UI=none UMI_ENV=dev umi dev",
