@@ -48,3 +48,6 @@ src/backend/uploads/
 
 # Sentry Auth Token
 #.sentryclirc
+
+# Environment variables with secrets
+.env
