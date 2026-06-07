@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: student-management-backend
+    env: node
+    buildCommand: npm install
+    startCommand: ts-node index.ts
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: NODE_VERSION
+        value: 18
+    plan: free
+
+databases:
+  - name: student-management-db
+    databaseName: student_management
+    user: student_app
+    plan: free
