@@ -32,6 +32,9 @@ app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 app.use('/uploads', express.static(path.join(process.cwd(), 'src', 'backend', 'uploads')));
 
+// Serve static frontend files
+app.use(express.static(path.join(process.cwd(), 'dist')));
+
 // ──────────────────────────────────────────────
 // Các Route REST
 // ──────────────────────────────────────────────
@@ -48,6 +51,11 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/admission', admissionRoutes);
 app.use('/api/ai', aiRoutes);
 app.use('/api/cutoff', cutoffRoutes);
+
+// Fallback to index.html for SPA routing
+app.get('*', (_req, res) => {
+	res.sendFile(path.join(process.cwd(), 'dist', 'index.html'));
+});
 
 // ──────────────────────────────────────────────
 // Kiểm tra sức khỏe server
